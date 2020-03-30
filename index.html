@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Movies Info</title>
+    <meta name="description" content="movies info">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+    <!-- Bootstrap Minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css?v=1.0">  
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
+       <div class="container1">
+         <div class="navbar-header">
+           <a class="navbar-brand" href="#">Movies Info</a>
+         </div>
+         <div id="navbar" class="collapse navbar-collapse">
+           <ul class="nav navbar-nav">
+             <li class="active"><a href="#">Home</a></li>
+             <li><a href="#about">About us</a></li>
+             <li><a href="#contact">Contact</a></li>
+           </ul>
+         </div><!--/.nav-collapse -->
+       </div><!-- /.container -->
+    </nav>
+     <div class="container">
+       <div class="row starter-template">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h1>All about movies</h1>
+              <form class="form-inline">
+                <div class="form-group">
+                  <label for="movieName">Name</label>
+                  <input type="text" class="form-control" id="movieName" name="movieName" placeholder="Example: Star Wars">
+                </div> <!-- /.form-group -->
+                <button type="submit" id="consultIMDB" class="btn btn-secondary">Search</button>
+              </form>
+            <div class="row imdb-info-content"></div>
+          </div><!-- /.col-md-8 -->
+          <div class="col-md-2"></div>
+       </div><!-- /."row starter-template -->
+     </div><!-- /.container -->
+
+    <script type="text/template" id="imdb-info-template">
+      <div class="col-sm-6">
+        <img src="<%= poster %>" width="350" height="545" />
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-success">
+          <div class="panel-heading"> <h3 class="panel-title">Information</h3> </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Actores:</strong> <%= actors %></li>
+              <li class="list-group-item"><strong>Director:</strong> <%= director %></li>
+              <li class="list-group-item"><strong>Pa&iacute;s:</strong> <%= country %></li>
+              <li class="list-group-item"><strong>Fecha:</strong> <%= released %></li>
+              <li class="list-group-item"><strong>Calificaci&oacute;n IMDB:</strong><span class="badge"><%= imdbRating %></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

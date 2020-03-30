@@ -1,0 +1,19 @@
+body {
+  	padding-top: 50px;
+}
+
+.starter-template {
+  padding: 30px 15px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+.container1 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+h1 {
+	font-family: 'Oswald', sans-serif;
+}
+.form-inline {
+	padding-bottom: 15px;
+}
